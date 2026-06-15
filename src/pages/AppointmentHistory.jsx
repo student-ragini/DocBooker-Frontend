@@ -9,7 +9,7 @@ useEffect(() => {
 const fetchAppointments = async () => {
 try {
 const { data } = await axios.get(
-"http://localhost:4000/api/v1/appointment/myappointments",
+"https://docbooker-backend-2hzo.onrender.com/api/v1/appointment/myappointments",
 {
 withCredentials: true,
 }

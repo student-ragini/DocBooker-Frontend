@@ -10,7 +10,7 @@ const MyAppointments = () => {
     const fetchAppointments = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/appointment/myappointments",
+          "https://docbooker-backend-2hzo.onrender.com/api/v1/appointment/myappointments",
           {
             withCredentials: true,
           }
@@ -34,7 +34,7 @@ const MyAppointments = () => {
   const cancelAppointment = async (id) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:4000/api/v1/appointment/cancel/${id}`,
+        `https://docbooker-backend-2hzo.onrender.com/api/v1/appointment/cancel/${id}`,
         {
           withCredentials: true,
         }
@@ -63,7 +63,7 @@ const MyAppointments = () => {
 
     try {
       const { data } = await axios.put(
-        `http://localhost:4000/api/v1/appointment/reschedule/${id}`,
+        `https://docbooker-backend-2hzo.onrender.com/api/v1/appointment/reschedule/${id}`,
         {
           appointment_date: selectedDate,
         },
