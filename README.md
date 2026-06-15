@@ -28,9 +28,11 @@ https://doc-booker-frontend.vercel.app
 Backend API:
 https://docbooker-backend-2hzo.onrender.com
 
-Installation
+Installation:
+
 npm install
 npm run dev
 
-Author
+Author:
+
 Ragini Kumari
