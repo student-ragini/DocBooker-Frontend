@@ -1,8 +1,36 @@
-# React + Vite
+DocBooker Frontend:-
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Patient-side application for the DocBooker Hospital Management System.
 
-Currently, two official plugins are available:
+Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Patient Registration & Login
+- Book Appointment
+- Cancel Appointment
+- Reschedule Appointment
+- Appointment History
+- Responsive UI
+- JWT Authentication
+
+Tech Stack:
+
+- React.js
+- Axios
+- React Router DOM
+- React Toastify
+- CSS
+
+Live Demo:
+
+Frontend: 
+https://doc-booker-frontend.vercel.app
+
+Backend API:
+https://docbooker-backend-2hzo.onrender.com
+
+Installation
+npm install
+npm run dev
+
+Author
+Ragini Kumari
