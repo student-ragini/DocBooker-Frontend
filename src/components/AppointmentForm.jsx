@@ -51,7 +51,9 @@ const AppointmentForm = () => {
         "https://docbooker-backend-2hzo.onrender.com/api/v1/user/patient/me",
         { withCredentials: true }
       );
-
+       
+       console.log(data.user);
+       
       setFirstName(data.user.firstName);
       setLastName(data.user.lastName);
       setEmail(data.user.email);
