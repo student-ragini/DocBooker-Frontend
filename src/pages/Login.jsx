@@ -3,12 +3,13 @@ import { Context } from '../main';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = () => {
   const { isAuthenticated, setIsAuthenticated } = useContext(Context);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPassword, setShowPassword] = useState("");
 
   const navigateTo = useNavigate();
 
@@ -17,7 +18,7 @@ const Login = () => {
     try {
       const response = await axios.post(
         "https://docbooker-backend-2hzo.onrender.com/api/v1/user/login",
-        { email, password, confirmPassword, role: "Patient" },
+        { email, password, role: "Patient" },
         {
           withCredentials: true,
         }
@@ -48,18 +49,22 @@ const Login = () => {
           onChange={(e) => setEmail(e.target.value)}
           placeholder='Email'
         />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder='Password'
-        />
-        <input
-          type="password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          placeholder='Confirm Password'
-        />
+       <div className="password-field">
+  <input
+    type={showPassword ? "text" : "password"}
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+    placeholder="Password"
+  />
+
+  <span
+    onClick={() => setShowPassword(!showPassword)}
+    className="eye-icon"
+  >
+    {showPassword ? <FaEyeSlash /> : <FaEye />}
+  </span>
+</div>
+        
         <div
           style={{
             gap: "10px",

@@ -789,3 +789,25 @@ footer .logo-img{
 .rescheduleBtn:hover {
   background: #1d4ed8;
 }
+
+.password-field {
+  position: relative;
+  flex: 1;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 45px !important;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: #555;
+  display: flex;
+  align-items: center;
+}
