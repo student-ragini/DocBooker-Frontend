@@ -8,6 +8,7 @@ const AppointmentForm = () => {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [nic, setNic] = useState("");
   const [dob, setDob] = useState("");
   const [gender, setGender] = useState("");
   const [appointmentDate, setAppointmentDate] = useState("");
@@ -44,31 +45,6 @@ const AppointmentForm = () => {
     fetchDoctors();
   }, []);
 
-  useEffect(() => {
-  const fetchPatient = async () => {
-    try {
-      const { data } = await axios.get(
-        "https://docbooker-backend-2hzo.onrender.com/api/v1/user/patient/me",
-        { withCredentials: true }
-      );
-       
-       console.log(data.user);
-       
-      setFirstName(data.user.firstName);
-      setLastName(data.user.lastName);
-      setEmail(data.user.email);
-      setPhone(data.user.phone);
-      setNic(data.user.nic);
-      setDob(data.user.dob.split("T")[0]);
-      setGender(data.user.gender);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  fetchPatient();
-}, []);
-
   const handleAppointment = async (e) => {
     e.preventDefault();
     try {
@@ -80,6 +56,7 @@ const AppointmentForm = () => {
           lastName,
           email,
           phone,
+          nic,
           dob,
           gender,
           appointment_date: appointmentDate,
@@ -101,6 +78,7 @@ const AppointmentForm = () => {
       setLastName("");
       setEmail("");
       setPhone("");
+      setNic("");
       setDob("");
       setGender("");
       setAppointmentDate("");
@@ -126,13 +104,13 @@ const AppointmentForm = () => {
               type="text"
               placeholder='First Name'
               value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}readOnly
+              onChange={(e) => setFirstName(e.target.value)}
             />
             <input
               type="text"
               placeholder='Last Name'
               value={lastName}
-              onChange={(e) => setLastName(e.target.value)}readOnly
+              onChange={(e) => setLastName(e.target.value)}
             />
           </div>
           <div>
@@ -140,33 +118,31 @@ const AppointmentForm = () => {
               type="text"
               placeholder='Email'
               value={email}
-              onChange={(e) => setEmail(e.target.value)}readOnly
+              onChange={(e) => setEmail(e.target.value)}
             />
             <input
               type="number"
               placeholder='Phone Number'
               value={phone}
-              onChange={(e) => setPhone(e.target.value)}readOnly
+              onChange={(e) => setPhone(e.target.value)}
             />
-            
           </div>
           <div>
-          <input
-            type="text"
-            placeholder="NIC"
-            value={nic}
-            readOnly
+            <input
+              type="numeber"
+              placeholder='NIC'
+              value={nic}
+              onChange={(e) => setNic(e.target.value)}
             />
-            
             <input
               type="date"
               placeholder='Date of Birth'
               value={dob}
-              onChange={(e) => setDob(e.target.value)}readOnly
+              onChange={(e) => setDob(e.target.value)}
             />
           </div>
           <div>
-            <select value={gender} onChange={(e) => setGender(e.target.value)}>disabled
+            <select value={gender} onChange={(e) => setGender(e.target.value)}>
               <option value="">Select Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
