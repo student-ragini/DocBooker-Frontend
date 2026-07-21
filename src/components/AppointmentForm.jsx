@@ -148,8 +148,16 @@ const AppointmentForm = () => {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}readOnly
             />
+            
           </div>
           <div>
+          <input
+            type="text"
+            placeholder="NIC"
+            value={nic}
+            readOnly
+            />
+            
             <input
               type="date"
               placeholder='Date of Birth'
