@@ -492,7 +492,6 @@ nav .navLinks .links {
 }
 nav .navLinks .links a {
   text-decoration: none;
-  white-space: nowrap;
   color: #222;
   font-size: 20px;
   font-weight: 600;
