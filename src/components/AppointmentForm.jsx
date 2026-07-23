@@ -1,5 +1,6 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { Context } from '../main';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -17,6 +18,7 @@ const AppointmentForm = () => {
   const [doctorLastName, setDoctorLastName] = useState("");
   const [address, setAddress] = useState("");
   const [hasVisited, setHasVisited] = useState(false);
+  const {user, isAuthenticated} = useContext(Context);
 
   const departmentsArray = [
     "Pediatrics",
@@ -44,6 +46,18 @@ const AppointmentForm = () => {
     };
     fetchDoctors();
   }, []);
+
+  useEffect(() => {
+  if (isAuthenticated && user) {
+    setFirstName(user.firstName || "");
+    setLastName(user.lastName || "");
+    setEmail(user.email || "");
+    setPhone(user.phone || "");
+    setNic(user.nic || "");
+    setDob(user.dob ? user.dob.split("T")[0] : "");
+    setGender(user.gender || "");
+  }
+}, [user, isAuthenticated]);
 
   const handleAppointment = async (e) => {
     e.preventDefault();
@@ -105,12 +119,14 @@ const AppointmentForm = () => {
               placeholder='First Name'
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
+              readOnly={isAuthenticated}
             />
             <input
               type="text"
               placeholder='Last Name'
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
+              readOnly={isAuthenticated}
             />
           </div>
           <div>
@@ -119,12 +135,14 @@ const AppointmentForm = () => {
               placeholder='Email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              readOnly={isAuthenticated}
             />
             <input
               type="number"
               placeholder='Phone Number'
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
+              readOnly={isAuthenticated}
             />
           </div>
           <div>
@@ -133,16 +151,19 @@ const AppointmentForm = () => {
               placeholder='NIC'
               value={nic}
               onChange={(e) => setNic(e.target.value)}
+              readOnly={isAuthenticated}
             />
             <input
               type="date"
               placeholder='Date of Birth'
               value={dob}
               onChange={(e) => setDob(e.target.value)}
+              readOnly={isAuthenticated}
             />
           </div>
           <div>
             <select value={gender} onChange={(e) => setGender(e.target.value)}>
+            disabled={isAuthenticated}
               <option value="">Select Gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
