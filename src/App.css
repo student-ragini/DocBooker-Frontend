@@ -497,8 +497,7 @@ nav .navLinks .links a {
   display: inline-block;
   overflow: visible !important;
   white-space: nowrap;
-  justify-content: space-between;
-  flex: 2;
+  flex: 3;
 
 }
 nav .navLinks .links a:hover {
