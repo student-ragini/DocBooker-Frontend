@@ -494,7 +494,7 @@ nav .navLinks .links a {
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 1.4px;
-  display: inline;
+  display: inline-block;
   overflow: visible !important;
   white-space: nowrap;
 }
