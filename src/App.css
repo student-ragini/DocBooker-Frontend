@@ -497,6 +497,7 @@ nav .navLinks .links a {
   display: inline-block;
   overflow: visible !important;
   white-space: nowrap;
+  justify-content: space-around;
   flex: 3;
 
 }
