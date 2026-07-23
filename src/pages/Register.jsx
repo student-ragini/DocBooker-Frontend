@@ -3,7 +3,7 @@ import { Context } from '../main';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
   const { isAuthenticated, setIsAuthenticated } = useContext(Context);
@@ -16,7 +16,7 @@ const Register = () => {
   const [gender, setGender] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigateTo = useNavigate();
 
@@ -94,7 +94,10 @@ const Register = () => {
           />
         </div>
         <div>
-          <select value={gender} onChange={(e) => setGender(e.target.value)}>
+          <select
+          className="gender-select"
+           value={gender} 
+          onChange={(e) => setGender(e.target.value)}>
             <option value="">Select Gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>

@@ -187,9 +187,10 @@ h6 {
 .form-component form textarea {
   flex: 1;
   font-size: 20px;
-  padding: 10px 10px 10px 40px;
+  padding: 10px 10px 10px 20px;
   border-radius: 7px;
   border: 1px solid rgb(106, 106, 106);
+  box-sizing: border-box;
 }
 .form-component button {
   padding: 10px 35px;
@@ -219,11 +220,11 @@ h6 {
 }
 .login-form {
   margin: 100px auto 20px auto;
-  max-width: 800px;
+  max-width: 600px;
   text-align: center;
 }
 .register-form {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 100px auto 20px auto;
 }
 .login-form h2 {
@@ -790,6 +791,12 @@ footer .logo-img{
   background: #1d4ed8;
 }
 
+
+  .form-component form select.gender-select {
+    flex: 0.92 !important;
+
+  }
+
 .password-field {
   position: relative;
   flex: 1;
@@ -797,17 +804,28 @@ footer .logo-img{
 
 .password-field input {
   width: 100%;
-  padding-right: 45px !important;
+  height: 56px;
+  padding-right: 45px;
 }
 
 .eye-icon {
   position: absolute;
-  right: 15px;
   top: 50%;
+  right: 15px;
   transform: translateY(-50%);
   cursor: pointer;
-  font-size: 20px;
-  color: #555;
   display: flex;
   align-items: center;
+  color: #555;
+
 }
+
+.eye-icon svg {
+  font-size: 18px;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
