@@ -484,19 +484,21 @@ nav .navLinks {
 }
 nav .navLinks .links {
   display: flex;
-  gap: 18px;
+  gap: 25px;
 
 
 }
 nav .navLinks .links a {
   text-decoration: none;
   color: #222;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.4px;
   display: inline-block;
   overflow: visible !important;
   white-space: nowrap;
+  justify-content: space-between;
+  flex: 2;
 
 }
 nav .navLinks .links a:hover {
