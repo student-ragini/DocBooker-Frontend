@@ -35,7 +35,7 @@ fetchAppointments();
 return (
 <section className="container appointmentPage">
 <h2 className="appointmentHeading">
- History
+ Completed Appointments
 </h2>
 
   <div className="appointmentGrid">
