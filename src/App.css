@@ -478,10 +478,12 @@ nav .navLinks {
   flex: 2;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 nav .navLinks .links {
   display: flex;
-  gap: 25px;
+  gap: 35px;
+  align-items: center;
 }
 nav .navLinks .links a {
   text-decoration: none;
@@ -489,6 +491,7 @@ nav .navLinks .links a {
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 1.4px;
+  white-space: nowrap;
 }
 nav .navLinks .links a:hover {
   color: #000;
