@@ -10,7 +10,7 @@
 }
 body {
   background: #fbfbfb;
-} 
+}
 .btn {
   padding: 7px 20px;
   border-radius: 12px;
@@ -472,18 +472,17 @@ nav .logo {
   align-items: center;
   font-size: 2rem;
 }
-
+nav .navLinks {
+  flex: 2;
+}
 nav .navLinks {
   display: flex;
-  flex: 2;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
 }
 nav .navLinks .links {
   display: flex;
-  gap: 35px;
-  align-items: center;
+  gap: 25px;
 }
 nav .navLinks .links a {
   text-decoration: none;
