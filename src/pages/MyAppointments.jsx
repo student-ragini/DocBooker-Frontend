@@ -101,7 +101,7 @@ const MyAppointments = () => {
   return (
     <section className="container appointmentPage">
       <h2 className="appointmentHeading">
-         Status
+        Appointments Status
       </h2>
 
       <div className="appointmentGrid">
