@@ -480,11 +480,13 @@ nav .navLinks {
   display: flex;
   justify-content:space-between;
   align-items: center;
+  gap: 30px;
 
 }
 nav .navLinks .links {
   display: flex;
-  gap: 25px;
+  gap: 35px;
+  align-items: center;
 
 
 }
@@ -495,10 +497,7 @@ nav .navLinks .links a {
   font-weight: 600;
   letter-spacing: 1.4px;
   display: inline-block;
-  overflow: visible !important;
   white-space: nowrap;
-  justify-content: left;
-  flex: 3;
 
 }
 nav .navLinks .links a:hover {
