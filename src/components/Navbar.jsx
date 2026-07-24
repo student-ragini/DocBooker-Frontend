@@ -62,13 +62,13 @@ const Navbar = () => {
 
           {isAuthenticated && (
             <Link to="/myappointments">
-              My Appointments
+             Appointments
             </Link>
           )}
 
           {isAuthenticated && (
             <Link to="/history">
-              Appointment History
+              History
             </Link>
           )}
         </div>
