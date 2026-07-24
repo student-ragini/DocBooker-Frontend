@@ -472,11 +472,10 @@ nav .logo {
   align-items: center;
   font-size: 2rem;
 }
-nav .navLinks {
-  flex: 2;
-}
+
 nav .navLinks {
   display: flex;
+  flex: 2;
   justify-content: space-between;
   align-items: center;
 }
