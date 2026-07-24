@@ -484,6 +484,7 @@ nav .navLinks {
 nav .navLinks .links {
   display: flex;
   gap: 25px;
+  
 }
 nav .navLinks .links a {
   text-decoration: none;
@@ -494,7 +495,7 @@ nav .navLinks .links a {
   white-space: nowrap;
   display: inline-block;
   overflow: visible !important;
-  gap: 15px;
+
 }
 nav .navLinks .links a:hover {
   color: #000;

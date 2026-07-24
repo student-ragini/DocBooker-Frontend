@@ -101,7 +101,7 @@ const MyAppointments = () => {
   return (
     <section className="container appointmentPage">
       <h2 className="appointmentHeading">
-         My Appointments
+         Status
       </h2>
 
       <div className="appointmentGrid">
@@ -193,7 +193,7 @@ const MyAppointments = () => {
           ))
         ) : (
           <h3 className="noAppointment">
-            No History Found
+            No Active Appointment
           </h3>
         )}
       </div>

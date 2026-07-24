@@ -35,7 +35,7 @@ fetchAppointments();
 return (
 <section className="container appointmentPage">
 <h2 className="appointmentHeading">
-Appointment History
+ History
 </h2>
 
   <div className="appointmentGrid">
@@ -80,7 +80,7 @@ Appointment History
       ))
     ) : (
       <h3 className="noAppointment">
-        No Appointment History
+        No History Found
       </h3>
     )}
   </div>
