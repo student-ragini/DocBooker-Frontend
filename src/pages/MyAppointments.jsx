@@ -18,7 +18,7 @@ const MyAppointments = () => {
 
         setAppointments(
           data.appointments.filter(
-            (item) => item.status !== "Cancelled"
+            (item) => item.status !== "Completed"
           )
         );
       } catch (error) {
@@ -131,6 +131,8 @@ const MyAppointments = () => {
                 <span
                   className={
                     item.status === "Accepted"
+                      ? "statusAccepted"
+                      : item.status === "Completed"
                       ? "statusAccepted"
                       : item.status === "Rejected"
                       ? "statusRejected"

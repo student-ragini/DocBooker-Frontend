@@ -17,7 +17,7 @@ withCredentials: true,
 
     setAppointments(
       data.appointments.filter(
-        (item) => item.status !== "Pending"
+        (item) => item.status !== "Completed"
       )
     );
   } catch (error) {
@@ -65,6 +65,8 @@ return (
             <span
               className={
                 item.status === "Accepted"
+                  ? "statusAccepted"
+                  : item.status === "Completed"
                   ? "statusAccepted"
                   : item.status === "Rejected"
                   ? "statusRejected"
