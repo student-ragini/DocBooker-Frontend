@@ -4,12 +4,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+ 
   font-family: "Baloo 2", sans-serif;
   /* font-family: "Montserrat", sans-serif; */
 }
 body {
   background: #fbfbfb;
+   overflow-x: hidden;
   }
 .btn {
   padding: 7px 20px;
