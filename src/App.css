@@ -493,7 +493,7 @@ nav .navLinks .links a {
   white-space: nowrap;
   display: inline-block;
   overflow: visible !important;
-  overflow: hidden;
+  gap: 15px;
 }
 nav .navLinks .links a:hover {
   color: #000;
