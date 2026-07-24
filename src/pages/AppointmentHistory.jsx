@@ -17,7 +17,7 @@ withCredentials: true,
 
     setAppointments(
       data.appointments.filter(
-        (item) => item.status !== "Completed"
+        (item) => item.status == "Completed"
       )
     );
   } catch (error) {
