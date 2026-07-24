@@ -491,6 +491,8 @@ nav .navLinks .links a {
   font-weight: 600;
   letter-spacing: 1.4px;
   white-space: nowrap;
+  display: inline-block;
+  overflow: visible !important;
 }
 nav .navLinks .links a:hover {
   color: #000;
