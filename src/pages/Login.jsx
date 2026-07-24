@@ -7,7 +7,7 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 const Login = () => {
-  const { isAuthenticated, setIsAuthenticated } = useContext(Context);
+  const { isAuthenticated, setIsAuthenticated, setUser } = useContext(Context);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -27,6 +27,7 @@ const Login = () => {
       );
       toast.success(response.data.message);
       setIsAuthenticated(true);
+      setUser(response.data.user);
       navigateTo("/");
       setEmail("");
       setPassword("");
